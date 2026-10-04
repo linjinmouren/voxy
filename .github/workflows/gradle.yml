@@ -40,6 +40,30 @@ jobs:
     - name: Build with Gradle Wrapper
       run: ./gradlew build
 
+    - name: Upload 1.20.1 Fabric artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: 1.20.1 fabric-mod
+        path: versions/1.20.1-fabric/build/libs/*.jar
+        
+    - name: Upload 1.20.1 Forge artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: 1.20.1 forge-mod
+        path: versions/1.20.1-forge/build/libs/*.jar
+
+    - name: Upload 1.21.1 NeoForge artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: 1.21.1 neoforge-mod
+        path: versions/1.21.1-neoforge/build/libs/*.jar
+
+    - name: Upload 1.21.1 Fabric artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: 1.21.1 fabric-mod
+        path: versions/1.21.1-fabric/build/libs/*.jar
+
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
     #
