@@ -1,6 +1,6 @@
 name: check-does-build
 
-on: [ push ]
+on: [ workflow_dispatch ]
 jobs:
   build:
     runs-on: ubuntu-latest
